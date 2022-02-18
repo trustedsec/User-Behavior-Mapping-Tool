@@ -234,197 +234,200 @@ if __name__ == '__main__':
     # Row[15]=OriginalLastModifiedOnClient -- Row[16]=Tag -- Row[17]=PlatformDeviceId -- Row[18]=Payload
     
     for row in dbdata:
-        #Init all vars as blanks
-        strActivityStatus = ""
-        strActivityType = ""
-        strAppActivityId = ""
-        strBackupType = ""
-        strBackupUpdated = ""
-        strCreationDate = ""
-        strCreatedInCloud = ""
-        strContent = ""
-        strContentUrl = ""
-        strCopiedText = ""
-        strDescription = ""
-        strDeviceIdentifier = ""
-        strDeviceName = ""
-        strDevicePlatform = ""
-        strDeviceType = ""
-        strDisplayName  = ""
-        strDisplayText = ""
-        strDuration = ""
-        strEtag = ""
-        strEndTime = ""
-        strExpirationTime = ""
-        strGroup = ""
-        strIsInUploadQueue = ""
-        strKnownFolder = ""
-        strLastModifiedTime = ""
-        strMake = ""
-        strMatchID = ""
-        strModel = ""
-        strName = ""
-        strNotification = ""
-        strObjectId = ""
-        strOriginalLastModifiedOnClient = ""
-        strPlatformDeviceId = ""
-        strPriority = ""
-        strStartTime = ""
-        strSynched = ""
-        strTag = ""
-        strTimeZone = ""
-        strType = ""
-        strVolumeID = ""
-        
-        ## Fill data ##
-        strEtag = row[0]
-        strAppActivityId = row[2]
-        strActivityStatus = row[4]
-        strGroup = row[5]
-        strMatchID = row[6]
-        strIsInUploadQueue = row[7]
-        strPriority = row[8]
-        strLastModifiedTime = row[10]
-        strExpirationTime = row[11]
-        strStartTime = row[12]
-        strCreatedInCloud = row[14]
-        strOriginalLastModifiedOnClient = row[15]
-        strTag = row[16]
-        strPlatformDeviceId = row[17]
-        
-
-        if row[18]:
-            if row[3] == 6:
-                if 'type' in (json.loads(row[18])):
-                    strType = (json.loads(row[18]))['type']
-                if 'activeDurationSeconds' in (json.loads(row[18])):
-                    strDuration = (json.loads(row[18]))['activeDurationSeconds']
-                if 'userTimezone' in (json.loads(row[18])):
-                    strTimeZone = (json.loads(row[18]))['userTimezone']
-                if 'devicePlatform' in (json.loads(row[18])):
-                    strDevicePlatform = (json.loads(row[18]))['devicePlatform']
-
-            if row[3] == 5:
-                if 'displayText' in (json.loads(row[18])):
-                    strDisplayText = (json.loads(row[18]))['displayText']
-                if 'description' in (json.loads(row[18])):    
-                    strDescription = (json.loads(row[18]))['description']
-                if 'appDisplayName' in (json.loads(row[18])):    
-                    strDisplayName = (json.loads(row[18]))['appDisplayName']
-                if 'contentUri' in (json.loads(row[18])):
-                    strContent = (json.loads(row[18]))['contentUri']
-                    
-            elif row[3] == 10:
-                strContent = (json.loads(row[18]))['content']  # If error it might be [1]['content'] - Needs B64 decoding, but need example from live database
-                #elseif($item.ActivityType -eq 10){[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(($item.Payload|ConvertFrom-Json)."1".content))}
-
-            if row[3] == 2:
-                strNotification = row[18]
-
-        if (json.loads(row[1]))[0]['platform'] == "afs_crossplatform":
-            strPlatform = (json.loads(row[1]))[1]['platform']
-        else:
-            strPlatform = (json.loads(row[1]))[0]['platform']
-        
-        if row[1]:
-            if "afs_crossplatform" in (json.loads(row[1]))[0]['platform']:
-                strSynched = "Yes"
-        
-        if row[3] == 10:
-            strCopiedText = base64.b64decode((json.loads(row[9]))[0]['content'])  #Convert from base64
-            #$clipboard = if($item.ActivityType -in (10)){[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(($item.ClipboardPayload|ConvertFrom-Json).content))}
-
-        acttypelist = [2,3,11,12,15]
-        if row[3] in acttypelist: 
-            strAppName = (json.loads(row[1]))[0]['application']
-        else: 
-            if (json.loads(row[1]))[0]['platform'] == "x_exe_path":
-                strAppName = (json.loads(row[1]))[0]['application']
-            elif (json.loads(row[1]))[0]['platform'] == "windows_win32":
-                strAppName = (json.loads(row[1]))[0]['application']
-            elif (json.loads(row[1]))[0]['platform'] == "windows_universal":
-                strAppName = (json.loads(row[1]))[0]['application']
-            elif (json.loads(row[1]))[1]['platform'] == "x_exe_path":
-                strAppName = (json.loads(row[1]))[1]['application']
-            elif (json.loads(row[1]))[1]['platform'] == "windows_win32":
-                strAppName = (json.loads(row[1]))[1]['application']
-            elif (json.loads(row[1]))[1]['platform'] == "windows_universal":
-                strAppName = (json.loads(row[1]))[1]['application']
-            elif (json.loads(row[1]))[2]['platform'] == "x_exe_path":
-                strAppName = (json.loads(row[1]))[2]['application']
-            elif (json.loads(row[1]))[2]['platform'] == "windows_win32":
-                strAppName = (json.loads(row[1]))[2]['application']
-            elif (json.loads(row[1]))[2]['platform'] == "windows_universal":
-                strAppName = (json.loads(row[1]))[2]['application']
-
-            # Replace app guid with name from the known list        
-            for k,v in known.items():
-                y = strAppName.split(k)
-                strAppName = v.join(y)
-
-            # Output "" if date is 1970            
-            if row[13] == '1970-01-01 01:00:00':
-                strEndTime = ""
-            else:
-                strEndTime = row[13]
+        try:
+            #Init all vars as blanks
+            strActivityStatus = ""
+            strActivityType = ""
+            strAppActivityId = ""
+            strBackupType = ""
+            strBackupUpdated = ""
+            strCreationDate = ""
+            strCreatedInCloud = ""
+            strContent = ""
+            strContentUrl = ""
+            strCopiedText = ""
+            strDescription = ""
+            strDeviceIdentifier = ""
+            strDeviceName = ""
+            strDevicePlatform = ""
+            strDeviceType = ""
+            strDisplayName  = ""
+            strDisplayText = ""
+            strDuration = ""
+            strEtag = ""
+            strEndTime = ""
+            strExpirationTime = ""
+            strGroup = ""
+            strIsInUploadQueue = ""
+            strKnownFolder = ""
+            strLastModifiedTime = ""
+            strMake = ""
+            strMatchID = ""
+            strModel = ""
+            strName = ""
+            strNotification = ""
+            strObjectId = ""
+            strOriginalLastModifiedOnClient = ""
+            strPlatformDeviceId = ""
+            strPriority = ""
+            strStartTime = ""
+            strSynched = ""
+            strTag = ""
+            strTimeZone = ""
+            strType = ""
+            strVolumeID = ""
             
-            if row[3] == 5 and strContent: #if activitytype 5 and data in payload
-                rxuri = re.compile("^file://(.*?)\?")
-                resulturi = rxuri.search(strContent)
-                if resulturi is not None:
-                    strContentUrl = resulturi.group(0)
-                    strContentUrl = strContentUrl.rstrip("?")
-                
-                rxvolid = re.compile("VolumeId={(.*?)}")
-                resultvolid = rxvolid.search(strContent)
-                if resultvolid is not None:
-                    strVolumeID = resultvolid.group(1)
-                
-                rxobjid = re.compile("ObjectId={(.*?)}")
-                resultobjit = rxobjid.search(strContent)
-                if resultobjit is not None:
-                    strObjectId = resultobjit.group(1)
+            ## Fill data ##
+            strEtag = row[0]
+            strAppActivityId = row[2]
+            strActivityStatus = row[4]
+            strGroup = row[5]
+            strMatchID = row[6]
+            strIsInUploadQueue = row[7]
+            strPriority = row[8]
+            strLastModifiedTime = row[10]
+            strExpirationTime = row[11]
+            strStartTime = row[12]
+            strCreatedInCloud = row[14]
+            strOriginalLastModifiedOnClient = row[15]
+            strTag = row[16]
+            strPlatformDeviceId = row[17]
+            
+            if row[18]:
+                if row[3] == 6:
+                    if 'type' in (json.loads(row[18])):
+                        strType = (json.loads(row[18]))['type']
+                    if 'activeDurationSeconds' in (json.loads(row[18])):
+                        strDuration = (json.loads(row[18]))['activeDurationSeconds']
+                    if 'userTimezone' in (json.loads(row[18])):
+                        strTimeZone = (json.loads(row[18]))['userTimezone']
+                    if 'devicePlatform' in (json.loads(row[18])):
+                        strDevicePlatform = (json.loads(row[18]))['devicePlatform']
 
-                rxknownfolder = re.compile("KnownFolderId=(.*?)\&")
-                resultknownfolder = rxknownfolder.search(strContent)
-                if resultknownfolder is not None:
-                    strKnownFolder = resultknownfolder.group(1)
-    
-            if strContentUrl and strContent:
-                strContent = strContentUrl
+                if row[3] == 5:
+                    if 'displayText' in (json.loads(row[18])):
+                        strDisplayText = (json.loads(row[18]))['displayText']
+                    if 'description' in (json.loads(row[18])):    
+                        strDescription = (json.loads(row[18]))['description']
+                    if 'appDisplayName' in (json.loads(row[18])):    
+                        strDisplayName = (json.loads(row[18]))['appDisplayName']
+                    if 'contentUri' in (json.loads(row[18])):
+                        strContent = (json.loads(row[18]))['contentUri']
+                        
+                elif row[3] == 10:
+                    strContent = (json.loads(row[18]))['content']  # If error it might be [1]['content'] - Needs B64 decoding, but need example from live database
+                    #elseif($item.ActivityType -eq 10){[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(($item.Payload|ConvertFrom-Json)."1".content))}
 
-            if row[3] == 3 and row[18]:
-                if 'backupType' in (json.loads(row[18])):
-                    strBackupType = (json.loads(row[18]))['backupType']
-                if 'deviceName' in (json.loads(row[18])):
-                    strDeviceName = (json.loads(row[18]))['deviceName']
-                if 'deviceIdentifier' in (json.loads(row[18])):
-                    strDeviceIdentifier = (json.loads(row[18]))['deviceIdentifier']
-                if 'creationDate' in (json.loads(row[18])):
-                    strCreationDate = (json.loads(row[18]))['creationDate']
-                if 'updateDate' in (json.loads(row[18])):
-                    strBackupUpdated = (json.loads(row[18]))['updateDate']
-
-            if row[3] == 2:
-                strActivityType = "Notification (2)"
-            elif row[3] == 3:
-                strActivityType = "Mobile Device Backup (3)"
-            elif row[3] == 5:
-                strActivityType = "Open App/File/Page (5)"
-            elif row[3] == 6:
-                strActivityType = "App In Use/Focus (6)"
-            elif row[3] == 10:
-                strActivityType = "Clipboard Text (10)"
-            elif row[3] == 11:
-                strActivityType = "System " + row[3]
-            elif row[3] == 12:
-                strActivityType = "System " + row[3]
-            elif row[3] == 15:
-                strActivityType = "System " + row[3]
-            elif row[3] == 16:
-                strActivityType = "Copy/Paste (16)"
+                if row[3] == 2:
+                    strNotification = row[18]
+            
+            if (json.loads(row[1]))[0]['platform'] == "afs_crossplatform":
+                strPlatform = (json.loads(row[1]))[1]['platform']
             else:
-                strActivityType = row[3]
+                strPlatform = (json.loads(row[1]))[0]['platform']
+                
+
+            if row[1]:
+                if "afs_crossplatform" in (json.loads(row[1]))[0]['platform']:
+                    strSynched = "Yes"
+            
+            if row[3] == 10:
+                strCopiedText = base64.b64decode((json.loads(row[9]))[0]['content'])  #Convert from base64
+                #$clipboard = if($item.ActivityType -in (10)){[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(($item.ClipboardPayload|ConvertFrom-Json).content))}
+
+            acttypelist = [2,3,11,12,15]
+            if row[3] in acttypelist: 
+                strAppName = (json.loads(row[1]))[0]['application']
+            else: 
+                if (json.loads(row[1]))[0]['platform'] == "x_exe_path":
+                    strAppName = (json.loads(row[1]))[0]['application']
+                elif (json.loads(row[1]))[0]['platform'] == "windows_win32":
+                    strAppName = (json.loads(row[1]))[0]['application']
+                elif (json.loads(row[1]))[0]['platform'] == "windows_universal":
+                    strAppName = (json.loads(row[1]))[0]['application']
+                elif (json.loads(row[1]))[1]['platform'] == "x_exe_path":
+                    strAppName = (json.loads(row[1]))[1]['application']
+                elif (json.loads(row[1]))[1]['platform'] == "windows_win32":
+                    strAppName = (json.loads(row[1]))[1]['application']
+                elif (json.loads(row[1]))[1]['platform'] == "windows_universal":
+                    strAppName = (json.loads(row[1]))[1]['application']
+                elif (json.loads(row[1]))[2]['platform'] == "x_exe_path":
+                    strAppName = (json.loads(row[1]))[2]['application']
+                elif (json.loads(row[1]))[2]['platform'] == "windows_win32":
+                    strAppName = (json.loads(row[1]))[2]['application']
+                elif (json.loads(row[1]))[2]['platform'] == "windows_universal":
+                    strAppName = (json.loads(row[1]))[2]['application']
+
+                # Replace app guid with name from the known list        
+                for k,v in known.items():
+                    y = strAppName.split(k)
+                    strAppName = v.join(y)
+
+                # Output "" if date is 1970            
+                if row[13] == '1970-01-01 01:00:00':
+                    strEndTime = ""
+                else:
+                    strEndTime = row[13]
+                
+                if row[3] == 5 and strContent: #if activitytype 5 and data in payload
+                    rxuri = re.compile("^file://(.*?)\?")
+                    resulturi = rxuri.search(strContent)
+                    if resulturi is not None:
+                        strContentUrl = resulturi.group(0)
+                        strContentUrl = strContentUrl.rstrip("?")
+                    
+                    rxvolid = re.compile("VolumeId={(.*?)}")
+                    resultvolid = rxvolid.search(strContent)
+                    if resultvolid is not None:
+                        strVolumeID = resultvolid.group(1)
+                    
+                    rxobjid = re.compile("ObjectId={(.*?)}")
+                    resultobjit = rxobjid.search(strContent)
+                    if resultobjit is not None:
+                        strObjectId = resultobjit.group(1)
+
+                    rxknownfolder = re.compile("KnownFolderId=(.*?)\&")
+                    resultknownfolder = rxknownfolder.search(strContent)
+                    if resultknownfolder is not None:
+                        strKnownFolder = resultknownfolder.group(1)
+        
+                if strContentUrl and strContent:
+                    strContent = strContentUrl
+
+                if row[3] == 3 and row[18]:
+                    if 'backupType' in (json.loads(row[18])):
+                        strBackupType = (json.loads(row[18]))['backupType']
+                    if 'deviceName' in (json.loads(row[18])):
+                        strDeviceName = (json.loads(row[18]))['deviceName']
+                    if 'deviceIdentifier' in (json.loads(row[18])):
+                        strDeviceIdentifier = (json.loads(row[18]))['deviceIdentifier']
+                    if 'creationDate' in (json.loads(row[18])):
+                        strCreationDate = (json.loads(row[18]))['creationDate']
+                    if 'updateDate' in (json.loads(row[18])):
+                        strBackupUpdated = (json.loads(row[18]))['updateDate']
+
+                if row[3] == 2:
+                    strActivityType = "Notification (2)"
+                elif row[3] == 3:
+                    strActivityType = "Mobile Device Backup (3)"
+                elif row[3] == 5:
+                    strActivityType = "Open App/File/Page (5)"
+                elif row[3] == 6:
+                    strActivityType = "App In Use/Focus (6)"
+                elif row[3] == 10:
+                    strActivityType = "Clipboard Text (10)"
+                elif row[3] == 11:
+                    strActivityType = "System " + row[3]
+                elif row[3] == 12:
+                    strActivityType = "System " + row[3]
+                elif row[3] == 15:
+                    strActivityType = "System " + row[3]
+                elif row[3] == 16:
+                    strActivityType = "Copy/Paste (16)"
+                else:
+                    strActivityType = row[3]
+        except:
+            continue
 
 
         diclist.append({
@@ -570,7 +573,7 @@ if __name__ == '__main__':
             if x:
                 mylist.add(x.group())
         myset = set(mylist)
-        textfile = open(outfolder+"Paths_Unique.txt", "w")
+        textfile = open(outfolder+"Paths_Unique.txt", "w", encoding='utf-8')
         for item in myset:
             textfile.write(str(item) + "\n")
         textfile.close()
