@@ -494,6 +494,8 @@ if __name__ == '__main__':
         print("Succesfully exported full raw database report")
         # Get TimeZone Name to set
         timezonedf = df['TimeZone']
+        nan_value = float("NaN")
+        timezonedf.replace("", nan_value, inplace=True)
         timezone = timezonedf.dropna().iloc[0]
 
         # Convert to the users Timezone
