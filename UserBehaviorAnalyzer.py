@@ -21,53 +21,53 @@ from termcolor import colored
 
 if __name__ == '__main__':
     logo = '''
-                                =vxr^rui))^^^<                                   
-                        .=(()*^(v!'         _LIu}ir;_`                           
-                    `?x|r:`'____`             :~ri}Tv}yVuvr?iyv~_                
-                 `;v)!  `__-  .___:^:-        -__.,<r\<_._____!~(ixr.            
-                vMx'  -_-   ._.'___.____-`_`__` :v**~;"!_` -_______vM^           
-               )v` `__`   `,!__-  __  .__Y!>)` `_ :Vx*!:",<='`!-   `.GG~         
-             `y! `__.,  _^;_'   `:"__,=:*)_T=.   ~<>*!,<!-:<!,"x!_=! `<Ux        
-            ;X_  ` '~",!:!` ,~_<L]L^~xLir:v("_. `_!~*ur=*<>:^=!\<~:vr' `Tv`      
-          'PV`   .<=-  `!` _()v*!!Lo}x*?iv;v).=_ ._.:=vVzc^!:^r<<=*~*)*_`xh).    
-        ,rx_ -___",__=,,,__:(*))*yVx*<::^ir_  ^ ._!^:}v, .:_"_">^<~:*~>*=:Mgl    
-      :M6*__~!==_:!<<.`:;^^=`  `:-.=r^^~_`.,  *`   ';=rv:="~,*Y^~<~<^~_>*!:I"    
-     !di` ____!___`;r_:: <_-:::<_"=_.  ~. ~~ 'u` `__,^rv:.!,=)~vvrL~x(~:_=*xb,   
-     !T  ", !```."rT=-*v_u~.,>=,_ ``   ~~ x* **    `:;:-)::)::x-.=i]._::^<~^)j-  
-     l; `~ !_.)^-.\="(\).v-_`  _"    `_(-.w":)  _=   `:_:^``~!!L= ,r<,-:'_!:,)y  
-     c- =.'!_,r!^=:;.*Tu\!`   __`_=!~^!,,}|!`~   ~     ``:)` i- r: ',=~=-:~:'}V  
-    `X` ~ :__^=` -Lr*mwk-`,_:~=x*=' `!*~!>_`," '.~ `   ~ -: .*~ '):`.v~~``r* TP  
-    rZ ``=!,)v^^|x?Yv*,^)``!`_-~_x<^|z:~=__.-_`-.~"`   ~`` '^"`  ~ ! -*<<:^;! y` 
-    II  `}!~'-rxr~:_-__,`  ~  !(.)- :r     `. :?_.=`  `=  `_     _ `! :);'i"~^T  
-   `z;  r!=`,`:^<:___`   ` ~_!^^_- `v'  -~)^:_)=:~=:___`           ', `-r!,!=e:  
-   u*  ^} ^-`='^^^:_____:)vxr~_`___>= .:"<^::!~__-__`   '=ri**^^^*r)iT=` -:!`y~  
-   Z~ -xr-,~=-: -::______`._-_:<!::<=~~,::-`           -m}`.        .iu   :_ =c  
-  `g=,_=)!=` _::` -___,!!><:!__'                   `(T*r!           ^y*   `.`rV  
-  _6x- !!_^v'._:__`  `___-'   ':=,<*^^r?L*!--=~``^VI\`       `-!^(xLxuGT~,=-cw`  
-   ~6` ~ _,^":~":.__`     -\3y^=!<*rr^!,-_:)*:^Px:     ")ivvxL}Lxvv}g#@@@d*'su   
-   .5` ~   '~ `"_:*aBs,,}xxcYxcXH5H3PGaKHMdZV!.`   ,iPKx_  '!^*^`   c~w@y^!*)w   
-   `Y? `:'  -!     ,G#@Q}I8@#0jv!.        -=V##QQQB@@y `=**ZD3]V,   ^YIzo._=xK_  
-     rv_ ._- `__-   T*^P#@@@Y `*xTkms35ZPi`  i@gr"~G@=.xVr^)**.      x6^z|I}_    
-      '**r~`    .-  V"  -l##- ;=_____--.'-- `W@^    )y.<xx^<,-`     \#P*my:      
-          ~}^"!vZ_  c!    (@*   .____:^^=_ `e#x      -oT!-____""<LMOGM-uM_       
-           `ww!`T=  :V`    lO.    `-__-` '^6Q*         rmkcws5ZMh}<`_OD*         
-             xT^")x. :u.    !whyIzVVkUHdROmY^`       `'=`.          :O~          
-              y-;^iX  _V`     _riivvv\*!~.-c:v^      `VK?y`         *}           
-              V.  :u   L*              !l vv  y.      xyV=l`        T=           
-              Y'_:.rxx<xc             ;T` `vr~X"      um~ !L!       a*`          
-             .L -*_`vQ~=_          -r(~      "^r*^^^^^*`    ~*~` _` V       
-             v=: ,!*=g!       .` :}*.                            c!~~     
-             ),,x-'P*ex       u= i`                    ` `:;     y!W-       
-              V-|i]0k_V_      ri     .ryevuM3TVY*^))*XkZU}GV.  `x*vd_           
-              -uqirgY -u:  ~: 'y`   `*.*hi,u* )M__W: *vy^~}    c,*])_            
-               `xiV'   `wy`'_  ~}`      )<*yv^ua^^mr^v*'rv`   _x*Y )_    OH BEHAVE!!        
-               _rk'    'kWx!    .r`      <\^-     `!)^rr.     `L^  x-            
-            :ix^o~     L^V'<v<`            _^^^^^r)*!'       :T:   uT-           
-        "*vWm= _V     `V ]v  :()"                          :T*`    V'L^          
-   ->***)Lv,   x?     _V 'Z_   `<)):                     ^xGx     :V  *i'        
-***^, `(v-     V,     `V  Li)~`   `~r**_              !rr~=u      T~   _Y~       
-     ^i_       V       V, `u`:rr^-    .<**^^~:,__:~**r!` _V'     _V      ^],     
-   'Y<        !3       (v  _\r=`-^**^:`    <e~~^>)}?^^^.=T'      c:       `)T~   
+                                =vxr^rui))^^^<
+                        .=(()*^(v!'         _LIu}ir;_`
+                    `?x|r:`'____`             :~ri}Tv}yVuvr?iyv~_
+                 `;v)!  `__-  .___:^:-        -__.,<r\<_._____!~(ixr.
+                vMx'  -_-   ._.'___.____-`_`__` :v**~;"!_` -_______vM^
+               )v` `__`   `,!__-  __  .__Y!>)` `_ :Vx*!:",<='`!-   `.GG~
+             `y! `__.,  _^;_'   `:"__,=:*)_T=.   ~<>*!,<!-:<!,"x!_=! `<Ux
+            ;X_  ` '~",!:!` ,~_<L]L^~xLir:v("_. `_!~*ur=*<>:^=!\<~:vr' `Tv`
+          'PV`   .<=-  `!` _()v*!!Lo}x*?iv;v).=_ ._.:=vVzc^!:^r<<=*~*)*_`xh).
+        ,rx_ -___",__=,,,__:(*))*yVx*<::^ir_  ^ ._!^:}v, .:_"_">^<~:*~>*=:Mgl
+      :M6*__~!==_:!<<.`:;^^=`  `:-.=r^^~_`.,  *`   ';=rv:="~,*Y^~<~<^~_>*!:I"
+     !di` ____!___`;r_:: <_-:::<_"=_.  ~. ~~ 'u` `__,^rv:.!,=)~vvrL~x(~:_=*xb,
+     !T  ", !```."rT=-*v_u~.,>=,_ ``   ~~ x* **    `:;:-)::)::x-.=i]._::^<~^)j-
+     l; `~ !_.)^-.\="(\).v-_`  _"    `_(-.w":)  _=   `:_:^``~!!L= ,r<,-:'_!:,)y
+     c- =.'!_,r!^=:;.*Tu\!`   __`_=!~^!,,}|!`~   ~     ``:)` i- r: ',=~=-:~:'}V
+    `X` ~ :__^=` -Lr*mwk-`,_:~=x*=' `!*~!>_`," '.~ `   ~ -: .*~ '):`.v~~``r* TP
+    rZ ``=!,)v^^|x?Yv*,^)``!`_-~_x<^|z:~=__.-_`-.~"`   ~`` '^"`  ~ ! -*<<:^;! y`
+    II  `}!~'-rxr~:_-__,`  ~  !(.)- :r     `. :?_.=`  `=  `_     _ `! :);'i"~^T
+   `z;  r!=`,`:^<:___`   ` ~_!^^_- `v'  -~)^:_)=:~=:___`           ', `-r!,!=e:
+   u*  ^} ^-`='^^^:_____:)vxr~_`___>= .:"<^::!~__-__`   '=ri**^^^*r)iT=` -:!`y~
+   Z~ -xr-,~=-: -::______`._-_:<!::<=~~,::-`           -m}`.        .iu   :_ =c
+  `g=,_=)!=` _::` -___,!!><:!__'                   `(T*r!           ^y*   `.`rV
+  _6x- !!_^v'._:__`  `___-'   ':=,<*^^r?L*!--=~``^VI\`       `-!^(xLxuGT~,=-cw`
+   ~6` ~ _,^":~":.__`     -\3y^=!<*rr^!,-_:)*:^Px:     ")ivvxL}Lxvv}g#@@@d*'su
+   .5` ~   '~ `"_:*aBs,,}xxcYxcXH5H3PGaKHMdZV!.`   ,iPKx_  '!^*^`   c~w@y^!*)w
+   `Y? `:'  -!     ,G#@Q}I8@#0jv!.        -=V##QQQB@@y `=**ZD3]V,   ^YIzo._=xK_
+     rv_ ._- `__-   T*^P#@@@Y `*xTkms35ZPi`  i@gr"~G@=.xVr^)**.      x6^z|I}_
+      '**r~`    .-  V"  -l##- ;=_____--.'-- `W@^    )y.<xx^<,-`     \#P*my:
+          ~}^"!vZ_  c!    (@*   .____:^^=_ `e#x      -oT!-____""<LMOGM-uM_
+           `ww!`T=  :V`    lO.    `-__-` '^6Q*         rmkcws5ZMh}<`_OD*
+             xT^")x. :u.    !whyIzVVkUHdROmY^`       `'=`.          :O~
+              y-;^iX  _V`     _riivvv\*!~.-c:v^      `VK?y`         *}
+              V.  :u   L*              !l vv  y.      xyV=l`        T=
+              Y'_:.rxx<xc             ;T` `vr~X"      um~ !L!       a*`
+             .L -*_`vQ~=_          -r(~      "^r*^^^^^*`    ~*~` _` V
+             v=: ,!*=g!       .` :}*.                            c!~~
+             ),,x-'P*ex       u= i`                    ` `:;     y!W-
+              V-|i]0k_V_      ri     .ryevuM3TVY*^))*XkZU}GV.  `x*vd_
+              -uqirgY -u:  ~: 'y`   `*.*hi,u* )M__W: *vy^~}    c,*])_
+               `xiV'   `wy`'_  ~}`      )<*yv^ua^^mr^v*'rv`   _x*Y )_    OH BEHAVE!!
+               _rk'    'kWx!    .r`      <\^-     `!)^rr.     `L^  x-
+            :ix^o~     L^V'<v<`            _^^^^^r)*!'       :T:   uT-
+        "*vWm= _V     `V ]v  :()"                          :T*`    V'L^
+   ->***)Lv,   x?     _V 'Z_   `<)):                     ^xGx     :V  *i'
+***^, `(v-     V,     `V  Li)~`   `~r**_              !rr~=u      T~   _Y~
+     ^i_       V       V, `u`:rr^-    .<**^^~:,__:~**r!` _V'     _V      ^],
+   'Y<        !3       (v  _\r=`-^**^:`    <e~~^>)}?^^^.=T'      c:       `)T~
     '''
     parser = argparse.ArgumentParser(description='Tool for parsing ActivityCache.db and generating reports and charts. Will output files (csv and jpg) in the current directory.')
     parser.add_argument('-f','--file', default=None, type=str, help='Path to ActivityCache.db')
@@ -81,58 +81,60 @@ if __name__ == '__main__':
         print(logo)
         parser.print_help()
         sys.exit(0)
-        
+
     print(logo)
     file = args.file
     only_gen_main = args.onlyexportmaindata
     verbose = args.verbose
     outfolder = args.outfolder
-    
+
     # Create outfolder if it does not exist
     isExist = os.path.exists(outfolder)
     if not isExist:
         os.makedirs(outfolder)
-        
 
     # Connect to database and get data
     con = sqlite3.connect(file)
     con.text_factory = lambda b: b.decode(errors = 'ignore')
     cur = con.cursor()
-    
+
     # Using Pandas to store the query
-    query = cur.execute('''select 
-       ETag,
-       AppId, 
-	   case when AppActivityId not like '%-%-%-%-%' then AppActivityId
-		else trim(AppActivityId,'ECB32AF3-1440-4086-94E3-5311F97F89C4\') end as 'AppActivityId',
-       ActivityType as 'Activity_type', 
-       case ActivityStatus 
-		when 1 then 'Active' when 2 then 'Updated' when 3 then 'Deleted' when 4 then 'Ignored' 
-		end as 'ActivityStatus',
-	   Smartlookup.'group' as 'Group', 
-       MatchID,
-       'No' AS 'IsInUploadQueue', 
-	   Priority as 'Priority',	
-	   ClipboardPayload,
-       datetime(LastModifiedTime, 'unixepoch', 'localtime')as 'LastModifiedTime',
-       datetime(ExpirationTime, 'unixepoch', 'localtime') as 'ExpirationTime',
-       datetime(StartTime, 'unixepoch', 'localtime') as 'StartTime',
-       datetime(EndTime, 'unixepoch', 'localtime') as 'EndTime',
-	   case 
-		when CreatedInCloud > 0 
-		then datetime(CreatedInCloud, 'unixepoch', 'localtime') 
-		else '' 
-	   end as 'CreatedInCloud',
-	   case 
-		when OriginalLastModifiedOnClient > 0 
-		then datetime(OriginalLastModifiedOnClient, 'unixepoch', 'localtime') 
-		else '' 
-	   end as 'OriginalLastModifiedOnClient',
-       Tag,
-       PlatformDeviceId,
-       Payload from Smartlookup
-       order by Etag desc''')
-    
+    try:
+        query = cur.execute('''select
+           ETag,
+           AppId,
+           case when AppActivityId not like '%-%-%-%-%' then AppActivityId
+            else trim(AppActivityId,'ECB32AF3-1440-4086-94E3-5311F97F89C4\') end as 'AppActivityId',
+           ActivityType as 'Activity_type',
+           case ActivityStatus
+            when 1 then 'Active' when 2 then 'Updated' when 3 then 'Deleted' when 4 then 'Ignored'
+            end as 'ActivityStatus',
+           Smartlookup.'group' as 'Group',
+           MatchID,
+           'No' AS 'IsInUploadQueue',
+           Priority as 'Priority',
+           ClipboardPayload,
+           datetime(LastModifiedTime, 'unixepoch', 'localtime')as 'LastModifiedTime',
+           datetime(ExpirationTime, 'unixepoch', 'localtime') as 'ExpirationTime',
+           datetime(StartTime, 'unixepoch', 'localtime') as 'StartTime',
+           datetime(EndTime, 'unixepoch', 'localtime') as 'EndTime',
+           case
+            when CreatedInCloud > 0
+            then datetime(CreatedInCloud, 'unixepoch', 'localtime')
+            else ''
+           end as 'CreatedInCloud',
+           case
+            when OriginalLastModifiedOnClient > 0
+            then datetime(OriginalLastModifiedOnClient, 'unixepoch', 'localtime')
+            else ''
+           end as 'OriginalLastModifiedOnClient',
+           Tag,
+           PlatformDeviceId,
+           Payload from Smartlookup
+           order by Etag desc''')
+    except:
+        sys.exit('Error parsing the database')
+
     dbdata = query.fetchall()
 
     known = {'308046B0AF4A39CB': 'Mozilla Firefox 64bit',
@@ -224,215 +226,191 @@ if __name__ == '__main__':
             '0762D272-C50A-4BB0-A382-697DCD729B80': 'UserProfiles',
             'F3CE0F7C-4901-4ACC-8648-D5D44B04EF8F': 'UsersFiles',
             '18989B1D-99B5-455B-841C-AB7C74E4DDFC': 'Videos',
-            'F38BF404-1D43-42F2-9305-67DE0B28FC23': 'Windows'}          
-        
+            'F38BF404-1D43-42F2-9305-67DE0B28FC23': 'Windows'}
+
     rows = []
     diclist = []
 
     # Row[0]=ETag -- Row[1]=AppId -- Row[2]=AppActivityId -- Row[3]=Activity_type -- Row[4]=ActivityStatus -- Row[5]=Group -- Row[6]=MatchID -- Row[7]=IsInUploadQueue
     # Row[8]=Priority -- Row[9]=ClipboardPayload -- Row[10]=LastModifiedTime -- Row[11]=ExpirationTime -- Row[12]=StartTime -- Row[13]=EndTime -- Row[14]=CreatedInCloud
     # Row[15]=OriginalLastModifiedOnClient -- Row[16]=Tag -- Row[17]=PlatformDeviceId -- Row[18]=Payload
-    
+
     for row in dbdata:
-        try:
-            #Init all vars as blanks
-            strActivityStatus = ""
-            strActivityType = ""
-            strAppActivityId = ""
-            strBackupType = ""
-            strBackupUpdated = ""
-            strCreationDate = ""
-            strCreatedInCloud = ""
-            strContent = ""
-            strContentUrl = ""
-            strCopiedText = ""
-            strDescription = ""
-            strDeviceIdentifier = ""
-            strDeviceName = ""
-            strDevicePlatform = ""
-            strDeviceType = ""
-            strDisplayName  = ""
-            strDisplayText = ""
-            strDuration = ""
-            strEtag = ""
-            strEndTime = ""
-            strExpirationTime = ""
-            strGroup = ""
-            strIsInUploadQueue = ""
-            strKnownFolder = ""
-            strLastModifiedTime = ""
-            strMake = ""
-            strMatchID = ""
-            strModel = ""
-            strName = ""
-            strNotification = ""
-            strObjectId = ""
-            strOriginalLastModifiedOnClient = ""
-            strPlatformDeviceId = ""
-            strPriority = ""
-            strStartTime = ""
-            strSynched = ""
-            strTag = ""
-            strTimeZone = ""
-            strType = ""
-            strVolumeID = ""
-            
-            ## Fill data ##
-            strEtag = row[0]
-            strAppActivityId = row[2]
-            strActivityStatus = row[4]
-            strGroup = row[5]
-            strMatchID = row[6]
-            strIsInUploadQueue = row[7]
-            strPriority = row[8]
-            strLastModifiedTime = row[10]
-            strExpirationTime = row[11]
-            strStartTime = row[12]
-            strCreatedInCloud = row[14]
-            strOriginalLastModifiedOnClient = row[15]
-            strTag = row[16]
-            strPlatformDeviceId = row[17]
-            
-            if row[18]:
-                if row[3] == 6:
-                    if 'type' in (json.loads(row[18])):
-                        strType = (json.loads(row[18]))['type']
-                    if 'activeDurationSeconds' in (json.loads(row[18])):
-                        strDuration = (json.loads(row[18]))['activeDurationSeconds']
-                    if 'userTimezone' in (json.loads(row[18])):
-                        strTimeZone = (json.loads(row[18]))['userTimezone']
-                    if 'devicePlatform' in (json.loads(row[18])):
-                        strDevicePlatform = (json.loads(row[18]))['devicePlatform']
-
-                if row[3] == 5:
-                    if 'displayText' in (json.loads(row[18])):
-                        strDisplayText = (json.loads(row[18]))['displayText']
-                    if 'description' in (json.loads(row[18])):    
-                        strDescription = (json.loads(row[18]))['description']
-                    if 'appDisplayName' in (json.loads(row[18])):    
-                        strDisplayName = (json.loads(row[18]))['appDisplayName']
-                    if 'contentUri' in (json.loads(row[18])):
-                        strContent = (json.loads(row[18]))['contentUri']
-                        
-                elif row[3] == 10:
-                    strContent = (json.loads(row[18]))['content']  # If error it might be [1]['content'] - Needs B64 decoding, but need example from live database
-                    #elseif($item.ActivityType -eq 10){[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(($item.Payload|ConvertFrom-Json)."1".content))}
-
-                if row[3] == 2:
-                    strNotification = row[18]
-            
-            if (json.loads(row[1]))[0]['platform'] == "afs_crossplatform":
-                strPlatform = (json.loads(row[1]))[1]['platform']
-            else:
-                strPlatform = (json.loads(row[1]))[0]['platform']
-                
-
-            if row[1]:
-                if "afs_crossplatform" in (json.loads(row[1]))[0]['platform']:
-                    strSynched = "Yes"
-            
-            if row[3] == 10:
-                strCopiedText = base64.b64decode((json.loads(row[9]))[0]['content'])  #Convert from base64
-                #$clipboard = if($item.ActivityType -in (10)){[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(($item.ClipboardPayload|ConvertFrom-Json).content))}
-
-            acttypelist = [2,3,11,12,15]
-            if row[3] in acttypelist: 
+        #Init all vars as blanks
+        strActivityStatus = ""
+        strActivityType = ""
+        strAppActivityId = ""
+        strBackupType = ""
+        strBackupUpdated = ""
+        strCreationDate = ""
+        strCreatedInCloud = ""
+        strContent = ""
+        strContentUrl = ""
+        strCopiedText = ""
+        strDescription = ""
+        strDeviceIdentifier = ""
+        strDeviceName = ""
+        strDevicePlatform = ""
+        strDeviceType = ""
+        strDisplayName  = ""
+        strDisplayText = ""
+        strDuration = ""
+        strEtag = ""
+        strEndTime = ""
+        strExpirationTime = ""
+        strGroup = ""
+        strIsInUploadQueue = ""
+        strKnownFolder = ""
+        strLastModifiedTime = ""
+        strMake = ""
+        strMatchID = ""
+        strModel = ""
+        strName = ""
+        strNotification = ""
+        strObjectId = ""
+        strOriginalLastModifiedOnClient = ""
+        strPlatformDeviceId = ""
+        strPriority = ""
+        strStartTime = ""
+        strSynched = ""
+        strTag = ""
+        strTimeZone = ""
+        strType = ""
+        strVolumeID = ""
+        ## Fill data ##
+        strEtag = row[0]
+        strAppActivityId = row[2]
+        strActivityStatus = row[4]
+        strGroup = row[5]
+        strMatchID = row[6]
+        strIsInUploadQueue = row[7]
+        strPriority = row[8]
+        strLastModifiedTime = row[10]
+        strExpirationTime = row[11]
+        strStartTime = row[12]
+        strCreatedInCloud = row[14]
+        strOriginalLastModifiedOnClient = row[15]
+        strTag = row[16]
+        strPlatformDeviceId = row[17]
+        if row[18]:
+            if row[3] == 6:
+                if 'type' in (json.loads(row[18])):
+                    strType = (json.loads(row[18]))['type']
+                if 'activeDurationSeconds' in (json.loads(row[18])):
+                    strDuration = (json.loads(row[18]))['activeDurationSeconds']
+                if 'userTimezone' in (json.loads(row[18])):
+                    strTimeZone = (json.loads(row[18]))['userTimezone']
+                if 'devicePlatform' in (json.loads(row[18])):
+                    strDevicePlatform = (json.loads(row[18]))['devicePlatform']
+            if row[3] == 5:
+                if 'displayText' in (json.loads(row[18])):
+                    strDisplayText = (json.loads(row[18]))['displayText']
+                if 'description' in (json.loads(row[18])):
+                    strDescription = (json.loads(row[18]))['description']
+                if 'appDisplayName' in (json.loads(row[18])):
+                    strDisplayName = (json.loads(row[18]))['appDisplayName']
+                if 'contentUri' in (json.loads(row[18])):
+                    strContent = (json.loads(row[18]))['contentUri']
+            elif row[3] == 10:
+                strContent = (json.loads(row[18]))['content']  # If error it might be [1]['content'] - Needs B64 decoding, but need example from live database
+                #elseif($item.ActivityType -eq 10){[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(($item.Payload|ConvertFrom-Json)."1".content))}
+            if row[3] == 2:
+                strNotification = row[18]
+        if (json.loads(row[1]))[0]['platform'] == "afs_crossplatform":
+            strPlatform = (json.loads(row[1]))[1]['platform']
+        else:
+            strPlatform = (json.loads(row[1]))[0]['platform']
+        if row[1]:
+            if "afs_crossplatform" in (json.loads(row[1]))[0]['platform']:
+                strSynched = "Yes"
+        if row[3] == 10:
+            strCopiedText = base64.b64decode((json.loads(row[9]))[0]['content'])  #Convert from base64
+            #$clipboard = if($item.ActivityType -in (10)){[System.Text.Encoding]::ASCII.GetString([System.Convert]::FromBase64String(($item.ClipboardPayload|ConvertFrom-Json).content))}
+        acttypelist = [2,3,11,12,15]
+        if row[3] in acttypelist:
+            strAppName = (json.loads(row[1]))[0]['application']
+        else:
+            if (json.loads(row[1]))[0]['platform'] == "x_exe_path":
                 strAppName = (json.loads(row[1]))[0]['application']
-            else: 
-                if (json.loads(row[1]))[0]['platform'] == "x_exe_path":
-                    strAppName = (json.loads(row[1]))[0]['application']
-                elif (json.loads(row[1]))[0]['platform'] == "windows_win32":
-                    strAppName = (json.loads(row[1]))[0]['application']
-                elif (json.loads(row[1]))[0]['platform'] == "windows_universal":
-                    strAppName = (json.loads(row[1]))[0]['application']
-                elif (json.loads(row[1]))[1]['platform'] == "x_exe_path":
-                    strAppName = (json.loads(row[1]))[1]['application']
-                elif (json.loads(row[1]))[1]['platform'] == "windows_win32":
-                    strAppName = (json.loads(row[1]))[1]['application']
-                elif (json.loads(row[1]))[1]['platform'] == "windows_universal":
-                    strAppName = (json.loads(row[1]))[1]['application']
-                elif (json.loads(row[1]))[2]['platform'] == "x_exe_path":
-                    strAppName = (json.loads(row[1]))[2]['application']
-                elif (json.loads(row[1]))[2]['platform'] == "windows_win32":
-                    strAppName = (json.loads(row[1]))[2]['application']
-                elif (json.loads(row[1]))[2]['platform'] == "windows_universal":
-                    strAppName = (json.loads(row[1]))[2]['application']
-
-                # Replace app guid with name from the known list        
-                for k,v in known.items():
-                    y = strAppName.split(k)
-                    strAppName = v.join(y)
-
-                # Output "" if date is 1970            
-                if row[13] == '1970-01-01 01:00:00':
-                    strEndTime = ""
-                else:
-                    strEndTime = row[13]
-                
-                if row[3] == 5 and strContent: #if activitytype 5 and data in payload
-                    rxuri = re.compile("^file://(.*?)\?")
-                    resulturi = rxuri.search(strContent)
-                    if resulturi is not None:
-                        strContentUrl = resulturi.group(0)
-                        strContentUrl = strContentUrl.rstrip("?")
-                    
-                    rxvolid = re.compile("VolumeId={(.*?)}")
-                    resultvolid = rxvolid.search(strContent)
-                    if resultvolid is not None:
-                        strVolumeID = resultvolid.group(1)
-                    
-                    rxobjid = re.compile("ObjectId={(.*?)}")
-                    resultobjit = rxobjid.search(strContent)
-                    if resultobjit is not None:
-                        strObjectId = resultobjit.group(1)
-
-                    rxknownfolder = re.compile("KnownFolderId=(.*?)\&")
-                    resultknownfolder = rxknownfolder.search(strContent)
-                    if resultknownfolder is not None:
-                        strKnownFolder = resultknownfolder.group(1)
-        
-                if strContentUrl and strContent:
-                    strContent = strContentUrl
-
-                if row[3] == 3 and row[18]:
-                    if 'backupType' in (json.loads(row[18])):
-                        strBackupType = (json.loads(row[18]))['backupType']
-                    if 'deviceName' in (json.loads(row[18])):
-                        strDeviceName = (json.loads(row[18]))['deviceName']
-                    if 'deviceIdentifier' in (json.loads(row[18])):
-                        strDeviceIdentifier = (json.loads(row[18]))['deviceIdentifier']
-                    if 'creationDate' in (json.loads(row[18])):
-                        strCreationDate = (json.loads(row[18]))['creationDate']
-                    if 'updateDate' in (json.loads(row[18])):
-                        strBackupUpdated = (json.loads(row[18]))['updateDate']
-
-                if row[3] == 2:
-                    strActivityType = "Notification (2)"
-                elif row[3] == 3:
-                    strActivityType = "Mobile Device Backup (3)"
-                elif row[3] == 5:
-                    strActivityType = "Open App/File/Page (5)"
-                elif row[3] == 6:
-                    strActivityType = "App In Use/Focus (6)"
-                elif row[3] == 10:
-                    strActivityType = "Clipboard Text (10)"
-                elif row[3] == 11:
-                    strActivityType = "System " + row[3]
-                elif row[3] == 12:
-                    strActivityType = "System " + row[3]
-                elif row[3] == 15:
-                    strActivityType = "System " + row[3]
-                elif row[3] == 16:
-                    strActivityType = "Copy/Paste (16)"
-                else:
-                    strActivityType = row[3]
-        except:
-            continue
-
-
+            elif (json.loads(row[1]))[0]['platform'] == "windows_win32":
+                strAppName = (json.loads(row[1]))[0]['application']
+            elif (json.loads(row[1]))[0]['platform'] == "windows_universal":
+                strAppName = (json.loads(row[1]))[0]['application']
+            elif (json.loads(row[1]))[1]['platform'] == "x_exe_path":
+                strAppName = (json.loads(row[1]))[1]['application']
+            elif (json.loads(row[1]))[1]['platform'] == "windows_win32":
+                strAppName = (json.loads(row[1]))[1]['application']
+            elif (json.loads(row[1]))[1]['platform'] == "windows_universal":
+                strAppName = (json.loads(row[1]))[1]['application']
+            elif (json.loads(row[1]))[2]['platform'] == "x_exe_path":
+                strAppName = (json.loads(row[1]))[2]['application']
+            elif (json.loads(row[1]))[2]['platform'] == "windows_win32":
+                strAppName = (json.loads(row[1]))[2]['application']
+            elif (json.loads(row[1]))[2]['platform'] == "windows_universal":
+                strAppName = (json.loads(row[1]))[2]['application']
+            # Replace app guid with name from the known list
+            for k,v in known.items():
+                y = strAppName.split(k)
+                strAppName = v.join(y)
+            # Output "" if date is 1970
+            if row[13] == '1970-01-01 01:00:00':
+                strEndTime = ""
+            else:
+                strEndTime = row[13]
+            if row[3] == 5 and strContent: #if activitytype 5 and data in payload
+                rxuri = re.compile(r"^file://(.*?)\?")
+                resulturi = rxuri.search(strContent)
+                if resulturi is not None:
+                    strContentUrl = resulturi.group(0)
+                    strContentUrl = strContentUrl.rstrip("?")
+                rxvolid = re.compile(r"VolumeId={(.*?)}")
+                resultvolid = rxvolid.search(strContent)
+                if resultvolid is not None:
+                    strVolumeID = resultvolid.group(1)
+                rxobjid = re.compile(r"ObjectId={(.*?)}")
+                resultobjit = rxobjid.search(strContent)
+                if resultobjit is not None:
+                    strObjectId = resultobjit.group(1)
+                rxknownfolder = re.compile(r"KnownFolderId=(.*?)\&")
+                resultknownfolder = rxknownfolder.search(strContent)
+                if resultknownfolder is not None:
+                    strKnownFolder = resultknownfolder.group(1)
+            if strContentUrl and strContent:
+                strContent = strContentUrl
+            if row[3] == 3 and row[18]:
+                if 'backupType' in (json.loads(row[18])):
+                    strBackupType = (json.loads(row[18]))['backupType']
+                if 'deviceName' in (json.loads(row[18])):
+                    strDeviceName = (json.loads(row[18]))['deviceName']
+                if 'deviceIdentifier' in (json.loads(row[18])):
+                    strDeviceIdentifier = (json.loads(row[18]))['deviceIdentifier']
+                if 'creationDate' in (json.loads(row[18])):
+                    strCreationDate = (json.loads(row[18]))['creationDate']
+                if 'updateDate' in (json.loads(row[18])):
+                    strBackupUpdated = (json.loads(row[18]))['updateDate']
+            if row[3] == 2:
+                strActivityType = "Notification (2)"
+            elif row[3] == 3:
+                strActivityType = "Mobile Device Backup (3)"
+            elif row[3] == 5:
+                strActivityType = "Open App/File/Page (5)"
+            elif row[3] == 6:
+                strActivityType = "App In Use/Focus (6)"
+            elif row[3] == 10:
+                strActivityType = "Clipboard Text (10)"
+            elif row[3] == 11:
+                strActivityType = "System " + row[3]
+            elif row[3] == 12:
+                strActivityType = "System " + row[3]
+            elif row[3] == 15:
+                strActivityType = "System " + row[3]
+            elif row[3] == 16:
+                strActivityType = "Copy/Paste (16)"
+            else:
+                strActivityType = row[3]
         diclist.append({
-            'Etag':strEtag, 
-            'App_name':strAppName, 
+            'Etag':strEtag,
+            'App_name':strAppName,
             'DisplayName':strDisplayName,
             'DisplayText':strDisplayText,
             'Description':strDescription,
@@ -473,24 +451,27 @@ if __name__ == '__main__':
             'BackupType':strBackupType,
             'BackupCreated':strCreationDate,
             'BackupUpdated':strBackupUpdated})
-        
+
     # Define Dataframe
     df = pd.DataFrame(diclist)
+
+    if not len(df):
+        sys.exit('The database is empty!')
+
     # Set datetime format and UTC
     df['StartTime'] = pd.to_datetime(df['StartTime'],utc=True)
     df['EndTime'] = pd.to_datetime(df['EndTime'],utc=True)
     df['LastModifiedTime'] = pd.to_datetime(df['LastModifiedTime'],utc=True)
     df['ExpirationTime'] = pd.to_datetime(df['ExpirationTime'],utc=True)
     df['CreatedInCloud'] = pd.to_datetime(df['CreatedInCloud'],utc=True)
-
     df['Duration'] = pd.to_numeric(df['Duration'])
 
     if only_gen_main:
-        df.to_csv(outfolder+'gen_report_exported_database.csv', index = False)
+        df.to_csv(os.path.join(outfolder, 'gen_report_exported_database.csv'), index = False)
         print("Succesfully exported full raw database report")
 
     else:
-        df.to_csv(outfolder+'gen_report_exported_database.csv', index = False)
+        df.to_csv(os.path.join(outfolder, 'gen_report_exported_database.csv'), index = False)
         print("Succesfully exported full raw database report")
         # Get TimeZone Name to set
         timezonedf = df['TimeZone']
@@ -504,7 +485,7 @@ if __name__ == '__main__':
         df['LastModifiedTime'] = df['LastModifiedTime'].dt.tz_convert(timezone)
         df['ExpirationTime'] = df['ExpirationTime'].dt.tz_convert(timezone)
         df['CreatedInCloud'] = df['CreatedInCloud'].dt.tz_convert(timezone)
-        
+
         ##### REPORT GEN #####
         # Report to show when the user is active
         # Export user start and end activity per day
@@ -528,22 +509,20 @@ if __name__ == '__main__':
             d[key].append(dte)
 
         # Find min and max
-        with open(outfolder+'gen_report_useractivity_start_and_end.csv', 'w', newline='\n') as csvfile:
+        with open(os.path.join(outfolder, 'gen_report_useractivity_start_and_end.csv'), 'w', newline='\n') as csvfile:
             csvwriter = csv.writer(csvfile)
             csvwriter.writerow(['First Time Entry', 'Last Time Entry'])
             for k,v in d.items():
                 csvwriter.writerow((min(v), max(v)))
-                
-        # Sort the csv and output it
-        csvData = pd.read_csv(outfolder+"gen_report_useractivity_start_and_end.csv", parse_dates=['First Time Entry','Last Time Entry'])
-        csvData.sort_values(["First Time Entry"], 
-                            axis=0,
-                            ascending=[False], 
-                            inplace=True)
-            
-        csvData.to_csv(outfolder+'gen_report_useractivity_start_and_end.csv', index = False)
-        print('Report gen_report_useractivity_start_and_end.csv Generated successfully')
 
+        # Sort the csv and output it
+        csvData = pd.read_csv(os.path.join(outfolder, "gen_report_useractivity_start_and_end.csv"), parse_dates=['First Time Entry','Last Time Entry'])
+        csvData.sort_values(["First Time Entry"],
+                            axis=0,
+                            ascending=[False],
+                            inplace=True)
+        csvData.to_csv(os.path.join(outfolder, 'gen_report_useractivity_start_and_end.csv'), index = False)
+        print('Report gen_report_useractivity_start_and_end.csv Generated successfully')
 
         ##### REPORT GEN #####
         # Report for When Applications are launched and details
@@ -553,16 +532,15 @@ if __name__ == '__main__':
         dg_procname_start = selection_openapp.copy()
         dg_procname_start = dg_procname_start[['StartTime','App_name','DisplayName','DisplayText','Description']]
         dg_procname_start.sort_values(by=['StartTime'],inplace=True, ascending=False)
-        dg_procname_start.to_csv(outfolder+'gen_report_ApplicationLaunch_StartTime.csv', index = False)
+        dg_procname_start.to_csv(os.path.join(outfolder, 'gen_report_ApplicationLaunch_StartTime.csv'), index = False)
         print('Report gen_report_ApplicationLaunch_StartTime.csv Generated successfully')
-
 
          ##### REPORT GEN #####
         # TXT file that contains all the unique paths found in the database
         # Description, AppActivityId, Content
         dg_paths = df.copy()
         dg_paths = dg_paths[['Description','AppActivityId','Content']]
-        
+
         temppath1 = df['Description'].astype(str).tolist()
         temppath2 = df['AppActivityId'].astype(str).tolist()
         temppath3 = df['Content'].astype(str).tolist()
@@ -571,16 +549,15 @@ if __name__ == '__main__':
         temppathlist[:] = [x for x in temppathlist if x] # Remove empty lines
         mylist = set()
         for element in temppathlist:
-            x = re.search("\w:\\\.*|(http://|https://).*|\{.*\}.*|file://.*|\\\\\\.*\\\.*", element)
+            x = re.search(r"\w:\\\.*|(http://|https://).*|\{.*\}.*|file://.*|\\\\\\.*\\\.*", element)
             if x:
                 mylist.add(x.group())
         myset = set(mylist)
-        textfile = open(outfolder+"Paths_Unique.txt", "w", encoding='utf-8')
+        textfile = open(os.path.join(outfolder, "Paths_Unique.txt"), "w", encoding='utf-8')
         for item in myset:
             textfile.write(str(item) + "\n")
         textfile.close()
         print('Paths_Unique.txt Generated successfully')
-
 
         ##### REPORT GEN #####
         # Most used Applications
@@ -596,9 +573,8 @@ if __name__ == '__main__':
         # Sum the Activity column
         active_apps = active_apps.groupby('App_name').sum().groupby(level=[0]).cumsum()
         active_apps.sort_values(by=['Duration'],inplace=True, ascending=False)
-        active_apps.to_csv(outfolder+'gen_report_Activity_Applications.csv')
+        active_apps.to_csv(os.path.join(outfolder, 'gen_report_Activity_Applications.csv'))
         print('Report gen_report_Activity_Applications.csv Generated successfully')
-
 
         # ##### CHART GEN #####
         # # HEATMAP For user Activity
@@ -616,7 +592,7 @@ if __name__ == '__main__':
         # Sort weekdays
         weekdays_order = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
         adf.day = pd.Categorical(adf.day,categories=weekdays_order)
-        
+
         # Generate pivot table from data
         heatmap_data = pd.pivot_table(adf, values='Duration', index='day', columns='hour')
 
@@ -628,7 +604,7 @@ if __name__ == '__main__':
         plt.tight_layout()
 
         # # Output heatmap to jpg file
-        plt.savefig(outfolder+'gen_fig_useractivity_heatmap.jpg',dpi=300)
+        plt.savefig(os.path.join(outfolder, 'gen_fig_useractivity_heatmap.jpg'),dpi=300)
         print('Chart gen_fig_useractivity_heatmap.jpg Generated successfully')
 
         # ##### CHART GEN #####
@@ -656,7 +632,7 @@ if __name__ == '__main__':
 
         ax1.legend(labels=['Idle', 'Active'])
         ax1.set_xticklabels(df1['Date'], rotation=90)
-        fig.savefig(outfolder+'gen_fig_useractivity_bar.jpg', bbox_inches='tight',dpi=300)
+        fig.savefig(os.path.join(outfolder, 'gen_fig_useractivity_bar.jpg'), bbox_inches='tight',dpi=300)
         print('Chart gen_fig_useractivity_bar.jpg Generated successfully')
 
         # ##### CHART GEN #####
@@ -664,9 +640,9 @@ if __name__ == '__main__':
         # # Lists out application and how long it has been actively in use in seconds
         top10 = active_apps.head(10)
         plot = top10.plot.pie(y='Duration', figsize=(5, 5), legend=False, title="Top 10 Applications", ylabel='')
-        plt.savefig(outfolder+'gen_fig_top10_apps_pie.jpg', bbox_inches='tight',dpi=300)
+        plt.savefig(os.path.join(outfolder, 'gen_fig_top10_apps_pie.jpg'), bbox_inches='tight',dpi=300)
         print('Chart gen_fig_top10_apps_pie.jpg Generated successfully')
 
         plot = top10.plot.barh(y='Duration', figsize=(5, 5), legend=False, title="Top 10 Applications", ylabel='')
-        plt.savefig(outfolder+'gen_fig_top10_apps_bars.jpg', bbox_inches='tight',dpi=300)
+        plt.savefig(os.path.join(outfolder, 'gen_fig_top10_apps_bars.jpg'), bbox_inches='tight',dpi=300)
         print('Chart gen_fig_top10_apps_bars.jpg Generated successfully')
