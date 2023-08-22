@@ -571,7 +571,7 @@ if __name__ == '__main__':
         active_apps = active_apps[['App_name','DisplayName','Duration']]
 
         # Sum the Activity column
-        active_apps = active_apps.groupby('App_name').sum().groupby(level=[0]).cumsum()
+        active_apps = active_apps.groupby('App_name').sum().groupby(level=[0]).sum()
         active_apps.sort_values(by=['Duration'],inplace=True, ascending=False)
         active_apps.to_csv(os.path.join(outfolder, 'gen_report_Activity_Applications.csv'))
         print('Report gen_report_Activity_Applications.csv Generated successfully')
